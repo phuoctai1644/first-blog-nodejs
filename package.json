@@ -1,0 +1,36 @@
+{
+  "name": "first-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass --watch src/scss/ --output public/css/",
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phuoctai1644/first-blog-nodejs.git"
+  },
+  "type": "module",
+  "keywords": [
+    "backene",
+    "nodejs",
+    "nodemon",
+    "sass"
+  ],
+  "author": "taipt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phuoctai1644/first-blog-nodejs/issues"
+  },
+  "homepage": "https://github.com/phuoctai1644/first-blog-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
