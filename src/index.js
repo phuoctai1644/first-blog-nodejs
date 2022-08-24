@@ -2,8 +2,12 @@ import express from "express";
 import { engine } from 'express-handlebars';
 import path from 'path'
 import {fileURLToPath} from 'url'; 
+import route from "./routes/index.js";
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Create __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -17,8 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Setup for static file
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.render('home')
-})  
+// Routes init
+route(app)
 
 app.listen(5000)
